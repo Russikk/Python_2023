@@ -55,13 +55,13 @@ def main():
     set_period = float(input("set_period: "))
 
     res = deposit(initial_sum, percent, fixed_period, set_period)
-    print(res)
+    print(f"Yield: {res}")
 
     # Calculate yields for common periods
     common_periods = [1, 12, 60, 120]  # 1 month, 1 year, 5 years, 10 years
     for period in common_periods:
         yield_value = deposit(initial_sum, percent, fixed_period, period)
-        print(f"Yield for {period} periods: {yield}")
+        print(f"Yield for {period} periods: {yield_value}")
 
 if __name__ == '__main__':
     main()
