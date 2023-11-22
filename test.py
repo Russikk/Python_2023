@@ -25,10 +25,9 @@ class DiskSensor(Sensor):
 
     def get_data(self):
         disk = psutil.disk_usage(self.path)
-        free_space_gb = disk.free / (2**30)  # Переведення байтів в гігабайти
+        free_space_gb = disk.free / (2**30)  
         return free_space_gb
-
-# Приклад використання
+        
 battery_sensor = BatterySensor("Battery")
 disk_sensor = DiskSensor("Disk", path='/')
 
